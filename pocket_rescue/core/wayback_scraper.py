@@ -14,6 +14,13 @@ import re
 import hashlib
 from bs4 import BeautifulSoup
 
+# Setup console encoding for Windows compatibility
+try:
+    from ..utils.console_utils import init_console
+    init_console()
+except ImportError:
+    pass
+
 
 class WaybackScraper:
     def __init__(self, base_dir="saved_articles"):

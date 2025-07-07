@@ -12,6 +12,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import List, Dict, Tuple
 import time
 
+# Setup console encoding for Windows compatibility
+try:
+    from ..utils.console_utils import init_console
+    init_console()
+except ImportError:
+    pass
+
 
 def is_valid_url(url: str) -> bool:
     """Check if URL has a valid format."""

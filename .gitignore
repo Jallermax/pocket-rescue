@@ -3,3 +3,4 @@
 /*.csv
 /saved_articles
 /.idea
+.env

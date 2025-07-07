@@ -11,6 +11,13 @@ from datetime import datetime, timedelta
 from pathlib import Path
 import sqlite3
 
+# Setup console encoding for Windows compatibility
+try:
+    from ..utils.console_utils import init_console
+    init_console()
+except ImportError:
+    pass
+
 
 class PriorityFilter:
     def __init__(self, base_dir="saved_articles"):

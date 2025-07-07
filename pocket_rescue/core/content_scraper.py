@@ -17,6 +17,13 @@ import time
 import re
 import hashlib
 
+# Setup console encoding for Windows compatibility
+try:
+    from ..utils.console_utils import init_console
+    init_console()
+except ImportError:
+    pass
+
 # For article extraction
 try:
     from newspaper import Article

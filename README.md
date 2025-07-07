@@ -41,6 +41,8 @@ uv pip install -r requirements.txt
 # Go to https://getpocket.com/export
 # Download the CSV file and place it in the project directory
 # Rename the file to 'part_000000.csv' for consistency
+# Alternatively, you can use the Pocket API to export your data
+https://getpocket.com/developer/docs/authentication
 ```
 Additionally, edit priority_filter.py to use your labels and priority weights.
 

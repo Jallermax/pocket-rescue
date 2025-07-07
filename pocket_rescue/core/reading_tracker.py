@@ -10,6 +10,13 @@ from datetime import datetime
 from pathlib import Path
 import csv
 
+# Setup console encoding for Windows compatibility
+try:
+    from ..utils.console_utils import init_console
+    init_console()
+except ImportError:
+    pass
+
 
 class ReadingTracker:
     def __init__(self, base_dir="saved_articles"):
